@@ -10,7 +10,9 @@ class LRUcache:
 
     def get(self,getitem):
         popped = self.cache.pop(self.cache.index(getitem))
+        # print(popped)
         self.cache.append(popped)
+        # print(self.cache)
         return popped
 
     def get_cache(self):

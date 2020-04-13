@@ -10,13 +10,14 @@ class main:
         print(self.check([9]))
         self.cach.put(8)
         print(self.check([9,8]))
-        self.cach.get(8)
+        self.cach.get(9)
         print(self.check([8,9]))
         self.cach.put(7)
         print(self.check([8,9,7]))
 
     def check(self, expected):
         result = self.cach.get_cache()
+        # print(result)
         if (len(result) != len(expected)):
             return False
         for i,j in enumerate(expected):
